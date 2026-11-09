@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wilmark Kipkirui Korir — Software Developer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;600&display=swap">
+<style>
+:root{--bg:#f7f0e4;--ink:#1e160e;--muted:rgba(30,22,14,.68);--card:rgba(255,250,240,.72);--line:rgba(120,80,20,.28);--accent:#a8641a;--accent2:#3b55d9;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0b09;--ink:#f5ebdc;--muted:rgba(245,235,220,.68);--card:rgba(20,15,11,.64);--line:rgba(242,200,138,.24);--accent:#f2c88a;--accent2:#7b93ff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0b09;--ink:#f5ebdc;--muted:rgba(245,235,220,.68);--card:rgba(20,15,11,.64);--line:rgba(242,200,138,.24);--accent:#f2c88a;--accent2:#7b93ff;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+main{position:relative;z-index:1}
+section{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:4rem 6vw}
+.wrap{width:100%;max-width:520px}
+section:nth-child(odd) .wrap{margin-left:auto}
+section:first-child .wrap,section:last-child .wrap{margin-left:0}
+h1,h2{font-family:Fraunces,Georgia,serif;line-height:1.08;margin:0 0 .6rem}
+h1{font-size:clamp(2.4rem,7vw,4.2rem)}
+h2{font-size:clamp(1.8rem,4.5vw,2.6rem)}
+.eyebrow{color:var(--accent);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;font-weight:600;margin:0 0 .8rem}
+p{margin:0 0 1rem;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.4rem 1.5rem;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);margin-bottom:.9rem}
+.card h3{margin:0 0 .3rem;font-size:1.05rem}
+.card p:last-child{margin:0}
+.hero .wrap{max-width:640px}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-block;padding:.8rem 1.3rem;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--accent);color:var(--ink)}
+.btn.main{background:var(--accent);color:var(--bg)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:.2rem .7rem;font-size:.85rem;color:var(--ink)}
+.k{color:var(--accent);font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin:.9rem 0 .4rem}
+.k:first-child{margin-top:0}
+.links a{display:block;color:var(--ink);text-decoration:none;padding:.55rem 0;border-bottom:1px solid var(--line)}
+.links a:last-child{border:0}
+.links b{color:var(--accent);display:inline-block;min-width:5.5rem;font-weight:600}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.js .wrap>*{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.js section.in .wrap>*{opacity:1;transform:none}
+.js section.in .wrap>:nth-child(2){transition-delay:.1s}.js section.in .wrap>:nth-child(3){transition-delay:.2s}.js section.in .wrap>:nth-child(4){transition-delay:.3s}.js section.in .wrap>:nth-child(5){transition-delay:.4s}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .wrap>*{opacity:1;transform:none;transition:none}}
+@media (max-width:760px){section{padding:3rem 1.2rem}.wrap,section:nth-child(odd) .wrap{margin-left:0;max-width:none}}
+.nav{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:calc(.8rem + env(safe-area-inset-top,0px)) 6vw .8rem;background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav a{color:var(--ink);text-decoration:none;font-size:.9rem;margin-left:1.2rem}
+.nav .brand{font-family:Fraunces,Georgia,serif;font-weight:700;margin:0;font-size:1rem}
+.nav i{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left}
+@media (max-width:760px){.nav{padding-left:1.2rem;padding-right:1.2rem}.nav div a:nth-child(-n+2){display:none}.nav a{margin-left:.9rem}}
+.proj{transition:border-color .3s}.proj:hover{border-color:var(--accent)}
+.plinks{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.9rem}
+.plinks a{font-size:.85rem;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:.35rem .8rem}
+.plinks a:hover{border-color:var(--accent)}
+.card .chips{margin-top:.2rem}
+@media (max-width:760px){.nav .brand{font-size:.9rem}}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="brand" href="#top">Wilmark Kipkirui Korir</a><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div><i id="bar"></i></nav>
+<canvas id="bg" aria-hidden="true"></canvas>
+<main>
+<section class="hero" id="top"><div class="wrap">
+<p class="eyebrow">Software Developer</p>
+<h1>Wilmark Kipkirui Korir</h1>
+<p>Full-Stack &amp; Android Developer from Kenya. I build useful web and mobile apps, and I’m learning AI and cybersecurity along the way.</p>
+<div class="btns"><a class="btn main" href="#projects">View projects</a><a class="btn" href="#contact">Contact me</a></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<p class="eyebrow">About</p>
+<h2>Building skills, one project at a time</h2>
+<div class="card"><p>Motivated and developing software professional with practical training in software engineering, full-stack development, artificial intelligence and cybersecurity. Passionate about creating useful technology and AI-powered applications.</p>
+<p>Currently a student at Mount Kenya University, while building web, backend, database and Android skills.</p></div>
+<div class="chips"><span>Problem solving</span><span>Continuous learning</span><span>Debugging</span><span>Teamwork</span><span>Communication</span><span>Creativity</span></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<p class="eyebrow">Skills</p>
+<h2>My toolbox</h2>
+<div class="card">
+<p class="k">Frontend</p><div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind CSS</span><span>Bootstrap</span></div>
+<p class="k">Backend &amp; database</p><div class="chips"><span>Python</span><span>Flask</span><span>Django</span><span>REST APIs</span><span>SQL</span><span>MySQL</span></div>
+<p class="k">Mobile</p><div class="chips"><span>Kotlin</span><span>Java</span><span>Android Studio</span></div>
+<p class="k">Tools &amp; AI</p><div class="chips"><span>Git</span><span>GitHub</span><span>VS Code</span><span>AI fundamentals</span><span>Ethical hacking</span></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap">
+<p class="eyebrow">Projects</p>
+<h2>Projects I’ve built</h2>
+<div class="card proj"><h3>KaziLink — Job Portal</h3><p>A full-stack recruitment platform connecting job seekers and employers, with separate seeker, employer and admin workflows. Job discovery, employer postings, résumé-based applications, status tracking and admin controls, with salaries shown in Kenyan shillings.</p><div class="chips"><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>Django REST</span><span>SQLite</span></div><div class="plinks"><a href="https://kazilink-1-lwku.onrender.com" target="_blank" rel="noopener">Live site ↗️</a><a href="https://github.com/wilmarkkorir-lab/KaziLink" target="_blank" rel="noopener">GitHub ↗️</a></div></div>
+<div class="card proj"><h3>ElimuHub — Learning Management System</h3><p>Instructors create and deliver courses; students enroll, study lessons, take quizzes, submit assignments and track their progress. Includes role permissions, server-side quiz scoring, grading and progress calculations.</p><div class="chips"><span>React</span><span>Django REST</span><span>LMS</span></div><div class="plinks"><a href="https://elimuhub-1.onrender.com" target="_blank" rel="noopener">Live site ↗️</a><a href="https://github.com/wilmarkkorir-lab/ElimuHub" target="_blank" rel="noopener">GitHub ↗️</a></div></div>
+<div class="card proj"><h3>PesaTrack — Personal Finance</h3><p>A personal-finance web app built around M-PESA. Track income and expenses, budgets, savings, bills and debt repayments, with dashboards and an AI assistant. Import M-PESA SMS or screenshots with browser-side OCR, and use it offline as a PWA.</p><div class="chips"><span>M-PESA</span><span>OCR</span><span>AI assistant</span><span>PWA</span></div><div class="plinks"><a href="https://pesa1-track.vercel.app" target="_blank" rel="noopener">Live site ↗️</a><a href="https://github.com/wilmarkkorir-lab/Pesa1Track" target="_blank" rel="noopener">GitHub ↗️</a></div></div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<p class="eyebrow">Education &amp; certificates</p>
+<h2>Always learning</h2>
+<div class="card"><h3>Mount Kenya University</h3><p>BA International Relations and Diplomacy. Currently enrolled.</p></div>
+<div class="card"><h3>Modcom Institute of Technology</h3><p>Software Engineering &amp; Full-Stack Software Development training, January to August 2026.</p></div>
+<div class="card"><p class="k">Certificates</p><p>Full Stack Software Development, 15 May 2026<br>Ethical Hacker (Cisco), 28 July 2026<br>Introduction to Modern AI (Cisco), 13 August 2026<br>Software Engineering, 2 September 2026</p></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<p class="eyebrow">Contact</p>
+<h2>Let’s build something</h2>
+<p>I’m looking to grow a career in software engineering, web development, backend systems, AI and mobile apps.</p>
+<div class="card links">
+<a href="mailto:wilmarkkorir@gmail.com"><b>Email</b>wilmarkkorir@gmail.com</a>
+<a href="https://wa.me/254705387545?text=Hi%20Wilmark%2C%20I%20saw%20your%20CV%20website." target="_blank" rel="noopener"><b>WhatsApp</b>+254 705 387 545</a>
+<a href="https://linkedin.com/in/wilmarkkorir" target="_blank" rel="noopener"><b>LinkedIn</b>wilmarkkorir</a>
+<a href="https://github.com/wilmarkkorir-lab" target="_blank" rel="noopener"><b>GitHub</b>wilmarkkorir-lab</a>
+</div>
+<div class="btns"><a class="btn main" href="https://wa.me/254705387545?text=Hi%20Wilmark%2C%20I%20saw%20your%20CV%20website." target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+</div></section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+document.documentElement.classList.add('js');
+const secs=[...document.querySelectorAll('section')];
+let cur=0;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){cur=secs.indexOf(e.target);e.target.classList.add('in')}}),{rootMargin:'-40% 0px -40% 0px'});
+secs.forEach(s=>io.observe(s));secs[0].classList.add('in');
+const bar=document.getElementById('bar');
+const prog=()=>{bar.style.transform='scaleX('+(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight))+')'};
+addEventListener('scroll',prog,{passive:true});prog();
+
+try{
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const canvas=document.getElementById('bg');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.outputEncoding=THREE.sRGBEncoding;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(50,1,.1,100);cam.position.z=10;
+
+scene.add(new THREE.AmbientLight(0xffffff,.45));
+const key=new THREE.DirectionalLight(0xffffff,1.6);key.position.set(5,5,6);scene.add(key);
+const rim=new THREE.PointLight(0xffffff,2.2,30);rim.position.set(-6,-2,-3);scene.add(rim);
+
+const dot=(inner)=>{const c=document.createElement('canvas');c.width=c.height=128;const g=c.getContext('2d');
+  const r=g.createRadialGradient(64,64,0,64,64,64);r.addColorStop(0,'rgba(255,255,255,1)');r.addColorStop(inner,'rgba(255,255,255,.35)');r.addColorStop(1,'rgba(255,255,255,0)');
+  g.fillStyle=r;g.fillRect(0,0,128,128);return new THREE.CanvasTexture(c)};
+
+const hero=new THREE.Group();scene.add(hero);
+const tilt=new THREE.Group();hero.add(tilt);
+
+const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:dot(.25),transparent:true,opacity:.5,depthWrite:false}));
+glow.scale.set(10,10,1);glow.position.z=-1.5;tilt.add(glow);
+
+const coreMat=new THREE.MeshStandardMaterial({metalness:.85,roughness:.28,flatShading:true,emissiveIntensity:.12});
+const core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.05,1),coreMat);tilt.add(core);
+const shellMat=new THREE.MeshBasicMaterial({wireframe:true,transparent:true,opacity:.35});
+const shell=new THREE.Mesh(new THREE.IcosahedronGeometry(1.5,1),shellMat);tilt.add(shell);
+
+const ringMats=[],satMats=[],rings=[];
+[[2.1,.5,0],[2.6,-.9,.6],[3.2,.2,-.8]].forEach(([r,rx,rz],i)=>{
+  const g=new THREE.Group();g.rotation.set(rx,0,rz);
+  const m=new THREE.MeshBasicMaterial({transparent:true,opacity:.7});ringMats.push(m);
+  g.add(new THREE.Mesh(new THREE.TorusGeometry(r,.012,8,200),m));
+  const sm=new THREE.MeshBasicMaterial();satMats.push(sm);
+  const sat=new THREE.Mesh(new THREE.SphereGeometry(.075,16,16),sm);sat.position.x=r;
+  const orbit=new THREE.Group();orbit.add(sat);g.add(orbit);
+  rings.push({orbit,sp:.006+i*.003});tilt.add(g);
+});
+
+const shardMat=[new THREE.MeshStandardMaterial({metalness:.7,roughness:.3,flatShading:true}),new THREE.MeshStandardMaterial({metalness:.7,roughness:.3,flatShading:true})];
+const shards=new THREE.Group();tilt.add(shards);
+const shardList=[];
+for(let i=0;i<40;i++){
+  const m=new THREE.Mesh(new THREE.OctahedronGeometry(.05+Math.random()*.09),shardMat[i%2]);
+  const a=Math.random()*6.283,b=Math.acos(2*Math.random()-1),r=3.6+Math.random()*4;
+  m.position.set(r*Math.sin(b)*Math.cos(a),r*Math.sin(b)*Math.sin(a),r*Math.cos(b));
+  m.userData={ph:Math.random()*6.283,sp:.4+Math.random()*.8,y:m.position.y};
+  shards.add(m);shardList.push(m);
+}
+
+const N=1400,pos=new Float32Array(N*3);
+for(let i=0;i<N*3;i++)pos[i]=(Math.random()-.5)*46;
+const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+const starMat=new THREE.PointsMaterial({size:.12,map:dot(.4),transparent:true,opacity:.75,depthWrite:false});
+const stars=new THREE.Points(sg,starMat);scene.add(stars);
+
+const names=['HTML5','CSS3','JavaScript','React','Tailwind','Bootstrap','Python','Flask','Django','REST APIs','SQL','MySQL','Kotlin','Java','Android','Git','GitHub','AI'];
+function tex(txt){
+  const c=document.createElement('canvas');c.width=256;c.height=72;const g=c.getContext('2d');
+  g.globalAlpha=.2;g.fillStyle=css('--accent');g.beginPath();(g.roundRect||g.rect).call(g,2,2,252,68,34);g.fill();
+  g.globalAlpha=1;g.strokeStyle=css('--accent');g.lineWidth=2;g.stroke();
+  g.fillStyle=css('--ink');g.font='600 30px system-ui,sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText(txt,128,38);
+  return new THREE.CanvasTexture(c);
+}
+const tags=new THREE.Group();scene.add(tags);
+const sprites=names.map((t,i)=>{
+  const y=1-(i/(names.length-1))*2,r=Math.sqrt(1-y*y),a=i*2.399963;
+  const s=new THREE.Sprite(new THREE.SpriteMaterial({map:tex(t),transparent:true,depthWrite:false}));
+  s.scale.set(1.6,.45,1);s.position.set(Math.cos(a)*r*2.7,y*2.7,Math.sin(a)*r*2.7);
+  tags.add(s);return s;
+});
+
+function recolor(){
+  const a=new THREE.Color(css('--accent')),b=new THREE.Color(css('--accent2'));
+  coreMat.color=a;coreMat.emissive=a;shellMat.color=b;
+  ringMats.forEach((m,i)=>m.color=i%2?a:b);satMats.forEach(m=>m.color=a);
+  shardMat[0].color=a;shardMat[1].color=b;starMat.color=a;glow.material.color=a;
+  key.color=a;rim.color=b;
+  sprites.forEach((s,i)=>{s.material.map.dispose();s.material.map=tex(names[i]);s.material.needsUpdate=true});
+}
+recolor();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',recolor);
+new MutationObserver(recolor).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+function size(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}
+size();addEventListener('resize',size);
+
+let mx=0,my=0;
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+
+const poses=[{x:3,s:1,t:0,z:10},{x:-3,s:.85,t:0,z:11},{x:-3.6,s:.55,t:1,z:11},{x:3.4,s:.75,t:0,z:11},{x:-3,s:.85,t:0,z:11},{x:0,s:1.25,t:0,z:12}];
+let tagS=0;
+function frame(t){
+  const p=poses[cur],mob=innerWidth<760,k=mob?.1:1,L=rm?1:.05;
+  hero.position.x+=(p.x*k-hero.position.x)*L;
+  hero.position.y+=((mob?2.3:0)-hero.position.y)*L;
+  const sc=hero.scale.x+((mob?p.s*.65:p.s)-hero.scale.x)*L;hero.scale.setScalar(sc);
+  cam.position.z+=(p.z-cam.position.z)*L;
+  tagS+=(p.t-tagS)*L;tags.visible=tagS>.02;
+  tags.scale.setScalar(Math.max(tagS,.001)*(mob?.65:1));
+  tags.position.x+=((mob?0:3.2)-tags.position.x)*L;
+  tilt.rotation.x+=(my*.5-tilt.rotation.x)*.05;
+  tilt.rotation.y+=(mx*.9-tilt.rotation.y)*.05;
+  tilt.rotation.z=scrollY*.0004;
+  if(!rm){
+    core.rotation.y+=.005;core.rotation.x+=.003;shell.rotation.y-=.003;shell.rotation.z+=.002;
+    rings.forEach(r=>r.orbit.rotation.z+=r.sp);
+    shards.rotation.y+=.0012;
+    shardList.forEach(m=>{m.rotation.x+=.01;m.rotation.y+=.012;m.position.y=m.userData.y+Math.sin(t/1000*m.userData.sp+m.userData.ph)*.25});
+    tags.rotation.y+=.003;stars.rotation.y+=.0002;
+    glow.material.opacity=.45+Math.sin(t/1400)*.08;
+  }
+  stars.position.y=scrollY*.002;
+  cam.position.x+=(mx*.5-cam.position.x)*.04;
+  cam.lookAt(0,0,0);
+  renderer.render(scene,cam);
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+}catch(err){const c=document.getElementById('bg');if(c)c.remove()}
+</script>
+</body>
+</html>
